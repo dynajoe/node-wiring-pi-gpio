@@ -1,0 +1,11 @@
+{
+  "name": "gpio-pin",
+  "version": "0.0.1",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "install": "node-gyp rebuild"
+  },
+  "author": "Joe Andaverde",
+  "gypfile": true
+}
