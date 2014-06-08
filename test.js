@@ -1,11 +1,8 @@
-var Max6675 = require('max6675-raspberry-pi');
+var GpioPin = require('./build/Release/GPIOPin.node');
 
-var sensor = new Max6675({
-   miso: 0,
-   ss: 2,
-   clk: 3
+var sensor = new GpioPin({
+   pin: 23,
+   direction: 1
 });
 
-setTimeout(function () {
-	console.log(sensor.read());
-});
+sensor.write(1);
