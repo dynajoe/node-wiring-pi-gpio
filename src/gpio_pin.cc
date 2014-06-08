@@ -74,7 +74,9 @@ Handle<Value> GPIOPin::Write(const Arguments& args)
 {
   HandleScope scope;
   GPIOPin* obj = ObjectWrap::Unwrap<GPIOPin>(args.This());
-  obj->SetValue(args[0]->ToInt32()->Value());
+  Local<Integer> value = Local<Integer>::Cast(args[0]);
+  obj->SetValue((int)(value->Int32Value()));
+
   return scope.Close(args.This());
 }
 
