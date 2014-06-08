@@ -82,5 +82,5 @@ Handle<Value> GPIOPin::Write(const Arguments& args)
 
 void GPIOPin::SetValue(int value)
 {
-   digitalWrite(this->m_pin, value);
+   digitalWrite(this->m_pin, value >= 1 ? HIGH : LOW);
 }
